@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## menbersテーブル
+## membersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -43,7 +43,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :message
-
+- has_many :members
 
 ## messageテーブル
 
@@ -66,3 +66,4 @@ Things you may want to cover:
 
 ### Association
 - has_many :message
+- has_many :users
