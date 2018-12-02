@@ -27,8 +27,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|rreferences|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -38,8 +38,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|index: false, null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|nickname|string|null: false|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :message
@@ -49,10 +49,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: true, foreign_key: true|
-|image|string|null: true, foreign_key: true|
-|group_id|integer|index: false, null: false, foreign_key: true|
-|user_id|integer|index: false, null: false, foreign_key: true|
+|body|text|null: true|
+|image|string|null: true|
+|group_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -62,7 +62,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|index: false, null: false, foreign_key: true|
+|groupname|string|null: false|
 
 ### Association
 - has_many :message
