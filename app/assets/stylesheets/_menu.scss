@@ -10,7 +10,7 @@
       .colorSet{
       color:white;
       background-color:#253141;
-      margin-left:19.5px;
+      margin-left:21.8px;
      }
   &__top{
     background-color: #253141;
@@ -70,7 +70,7 @@
     margin:28px 40px 0px 0px;
     padding:10px 20px;
     position:absolute;
-    top:5px;
+    top:-5px;
     right:0px;
   }
   }
@@ -124,8 +124,8 @@
       height:40px;
       width:50px;
       position: absolute;
-      top:calc((100%));
-      left:calc((100% - 120px));
+      top:calc((100% + 35px));
+      left:calc((100% - 200px));
     }
   }
 }

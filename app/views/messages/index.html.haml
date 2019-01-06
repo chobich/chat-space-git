@@ -5,8 +5,8 @@
     .left
       .left__top
         ログインユーザーの表示
-        %i.far.fa-edit.colorSet
-        %i.fas.fa-cog.colorSet
+        = fa_icon 'edit',class:'colorSet'
+        = fa_icon 'cog',class:'colorSet'
       .left__under
         %p.group-name テストグループの表示
         %p.group-message hello
@@ -28,6 +28,6 @@
           %input.send{:type => "submit", :value => "Send"}/
           %span.icon
             %label{:for => "icon"}
-              %i.fas.fa-camera.icon
+              = fa_icon 'camera',class:'colorSet'
 
 
