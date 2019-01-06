@@ -1,0 +1,132 @@
+@import "font-awesome";
+@mixin left(){
+  color:#ffffff;
+  float:left;
+  width:300px;
+  margin:0px;
+  padding:0px;
+}
+.left{
+  @include left();
+      .colorSet{
+      color:white;
+      background-color:#253141;
+      margin-left:19.5px;
+     }
+  &__top{
+    background-color: #253141;
+    padding:35px 20px 35px 20px;
+     font-size:16px;
+     font-weight:bold;
+     margin:0px;
+     display:inline-block;
+     border-bottom-style:solid;
+     border-bottom-width:0px;
+  }
+
+  &__under{
+    background-color: #2f3e51;
+    height:100vh;
+    .group-name{
+    font-size:15px;
+    padding:20px 20px 5px;
+    margin: 0px;
+  }
+  .group-message{
+    font-size:11px;
+    padding:0px 20px 20px;
+    margin:0px;
+  }
+  }
+}
+@mixin right(){
+  width:calc((100vw - 300px));
+  margin:0px 0px 0px 300px;
+  background-color:#FFFFFF;
+}
+.right{
+  @include right();
+  &__top{
+    color:#333333;
+    box-sizing:border-box;
+    padding:0px 0px 0px 40px;
+    border-bottom-color: #eeeeee;
+    border-bottom-style:solid;
+    border-bottom-width:1px;
+    .group-name{
+      font-size:20px;
+      padding:35px 0px 5px 0px;
+      margin:0px;
+    }
+  .group-member{
+    font-size:16px;
+    margin:0px 0px 0px 0px;
+    color:#999999;
+  }
+  .edit{
+    font-size:16px;
+    border-style:solid;
+    color: #38AEF0;
+    float:right;
+    margin:28px 40px 0px 0px;
+    padding:10px 20px;
+    position:absolute;
+    top:5px;
+    right:0px;
+  }
+  }
+  &__middle{
+    height:calc((100vh - 91px));
+    padding:0px 0px 0px 40px;
+  .chat-name{
+    display: inline-block;
+    font-weight:bold;
+    font-size:16px;
+    margin:46px 0px 0px 0px ;
+
+  }
+  .chat-time{
+    display: inline-block;
+    font-size:12px;
+    color:#999999;
+    padding:0px 0px 0px 10px;
+  }
+  .chat-comment{
+    font-size:14px;
+    color:#43A54;
+  }
+  }
+  &__under{
+      background-color:gray;
+      height:90px;
+         .text-area{
+      margin:20px 0px 20px 50px;
+      padding:0px;
+      height:50px;
+      font-size:16px;
+      color:#434A54;
+      box-sizing:border-box;
+      width:calc((100vw - 500px));
+         }
+    .send{
+      background-color:#38AEF0;
+      margin:20px 40px 20px 0px;
+      padding:0px 20px;
+      border-style:none;
+      height:50px;
+      font-size:16px;
+      color:#ffffff;
+      float:right;
+    }
+    .button{
+      display:none;
+    }
+    .icon{
+      height:40px;
+      width:50px;
+      position: absolute;
+      top:calc((100% + 4px));
+      left:calc((100% - 120px));
+    }
+  }
+}
