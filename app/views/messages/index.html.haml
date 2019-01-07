@@ -1,33 +1,24 @@
-!!!
-%html
-  %head
-    %title chatspace
-    .left
-      .left__top
-        ログインユーザーの表示
-        = fa_icon 'edit',class:'colorSet'
-        = fa_icon 'cog',class:'colorSet'
-      .left__under
-        %p.group-name テストグループの表示
-        %p.group-message hello
-        %p.group-name テストグループ2の表示
-        %p.group-message nice
-    .right
-      .right__top
-        %p.group-name グループ名
-        %p.edit Edit
-        %p.group-member shinya
-      .right__middle
-        %p.chat-name member
-        %p.chat-time 時間
-        %p.chat-comment コメント
-      .right__under
-        %form
-          %input.text-area{:placeholder => "type a message"}/
-          %input#icon.button{:type => "file"}/
-          %input.send{:type => "submit", :value => "Send"}/
-          %span.icon
-            %label{:for => "icon"}
-              = fa_icon 'camera',class:'colorSet'
-
-
+.left
+.left__top
+ログインユーザーの表示
+.left__under
+ %p.group-name テストグループの表示
+ %p.group-message hello
+ %p.group-name テストグループ2の表示
+ %p.group-message nice
+.right
+ .right__top
+ %p.group-name グループ名
+ %p.edit Edit
+ %p.group-member shinya
+ .right__middle
+ %p.chat-name member
+ %p.chat-time 時間
+ %p.chat-comment コメント
+ .right__under
+ %form
+ %input.text-area{:placeholder => "type a message"}/
+ %input#icon.button{:type => "file"}/
+ %input.send{:type => "submit", :value => "Send"}/
+ %span.icon
+ %label{:for => "icon"}
