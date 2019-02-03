@@ -1,0 +1,35 @@
+@mixin right(){
+  width:calc((100vw - 300px));
+  margin:0px 0px 0px 300px;
+  background-color:#FFFFFF;
+}
+.top{
+     @include right();
+    color:#333333;
+    box-sizing:border-box;
+    padding:0px 0px 0px 40px;
+    border-bottom-color: #eeeeee;
+    border-bottom-style:solid;
+    border-bottom-width:1px;
+  .edit{
+    font-size:16px;
+    border-style:solid;
+    color: #38AEF0;
+    float:right;
+    margin:28px 40px 0px 0px;
+    padding:10px 20px;
+    position:absolute;
+    top:-5px;
+    right:0px;
+  }
+  .group-name{
+    font-size:20px;
+    padding:28px 0px 17px 0px;
+    margin:0px;
+    }
+      .group-member{
+    font-size:12px;
+    margin:0px 0px 0px 0px;
+    color:#999999;
+  }
+    }
