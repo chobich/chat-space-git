@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(message){
+  function buildSendMessageHTML(message){
     var html =`
 <div class="right">
 <div class="upper-message">
@@ -31,9 +31,8 @@ ${message.content}
       contentType: false
     }
     )
-    .done(function(data){
-      console.log(data);
-      var html =buildHTML(data);
+    .done(function(message_data){
+      var html =buildSendMessageHTML(message_data);
       $('.message-box').append(html).animate({scrollTop: $('.message-box')[0].scrollHeight});
       $('.form__submit').prop('disabled',false);
       $('.form__message').val('')
