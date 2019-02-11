@@ -9,3 +9,15 @@
       - if message.content..present?
         = message.content
         = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+
+
+/ -if @messages
+/ .right
+/   .upper-message
+/     .upper-message__chat_name
+/       = message.user.name
+/     .upper-message__chat_time
+/       =message.created_at.strftime("%Y/%m/%d %H:%M")
+/   .lower-message
+/     =message.content
