@@ -33,7 +33,7 @@ $(function(){
     }
     )
     .done(function(message_data,status, xhr){
-      var html =buildSendMessageHTML(message_data);
+      var html = buildSendMessageHTML(message_data);
       $('.message-box').append(html).animate({scrollTop: $('.message-box')[0].scrollHeight});
       $('.form__submit').prop('disabled',false);
       $('#new_message')[0].reset();
