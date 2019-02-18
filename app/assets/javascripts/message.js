@@ -1,22 +1,22 @@
 $(function(){
   function buildSendMessageHTML(message){
-    var messageImage = message.image?message.image:""
+    var messageImage = message.image ? message.image:""
     var html =`<div class="right">
-                <div class="upper-message">
-                <div class="upper-message__chat_name">
-                ${message.user_name}
-                </div>
-                <div class="upper-message__chat_time">
-                ${message.time}
-                </div>
-                </div>
-                <div class="lower-message">
-                <div class="lower-message__chat_comment">
-                ${message.content}
-                <img src="${messageImage}">
-                </div>
-                </div>
-                </div>`
+                 <div class="upper-message">
+                  <div class="upper-message__chat_name">
+                   ${message.user_name}
+                  </div>
+                  <div class="upper-message__chat_time">
+                   ${message.time}
+                  </div>
+                 </div>
+               <div class="lower-message">
+                 <div class="lower-message__chat_comment">
+                  ${message.content}
+                  <img src="${messageImage}">
+                 </div>
+               </div>
+              </div>`
     return html;
 }
   $('#new_message').on('submit',function(e){
