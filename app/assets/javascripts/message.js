@@ -59,9 +59,9 @@ $(function(){
       dataType: 'json'
     })
 
-    .done(function(data){
+    .done(function(new_message){
       var insertHTML = '';
-        data.forEach(function(message){
+        new_message.forEach(function(message){
         insertHTML = buildSendMessageHTML(message);
       });
       $('.message-box').append(insertHTML);
