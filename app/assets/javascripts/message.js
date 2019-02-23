@@ -1,13 +1,13 @@
 $(function(){
   function buildSendMessageHTML(message){
     var messageImage = message.image ? message.image:""
-    var html =`<div class="right">
+    var html =`<div class="right" data-id="${message.id}">
                  <div class="upper-message">
                   <div class="upper-message__chat_name">
                    ${message.user_name}
                   </div>
                   <div class="upper-message__chat_time">
-                   ${message.time}
+                   ${message.created_at}
                   </div>
                  </div>
                <div class="lower-message">
@@ -43,4 +43,36 @@ $(function(){
       alert('error');
     })
 })
+
+$(function(){
+    setInterval(updateMessage, 500);
+  });
+
+  function updateMessage(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+
+    var latest_message_id = $('.right').last().data('id');
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      data: { id: latest_message_id },
+      dataType: 'json'
+    })
+
+    .done(function(data){
+      var insertHTML = '';
+        data.forEach(function(message){
+        insertHTML = buildSendMessageHTML(message);
+      });
+      $('.message-box').append(insertHTML);
+      $('.message-box').animate({scrollTop: $('.message-box')[0].scrollHeight});
+    })
+    .fail(function(){
+      alert('自動更新に失敗しました');
+    });
+  } else {
+      clearInterval(updateMessage);
+    }
+  }
+
 })
