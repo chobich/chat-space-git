@@ -10,8 +10,9 @@
           = fa_icon 'cog'
     .footer
       - current_user.groups.each do |group|
+        .group
         = link_to group_messages_path(group) do
-          .footer__group-name
+          .group__name
             = group.name
-          .footer__group-message
+          .group__message
             = group.show_last_message
