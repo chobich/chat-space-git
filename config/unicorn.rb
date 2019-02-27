@@ -15,6 +15,8 @@ check_client_connection false
 
 run_once = true
 
+ENV['BUNDLE_GEMFILE'] = rails_root + "/Gemfile"
+
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) &&
     ActiveRecord::Base.connection.disconnect!
