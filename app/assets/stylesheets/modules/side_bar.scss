@@ -5,9 +5,6 @@
   margin:0px;
   padding:0px;
 }
-.side-box{
-  height:auto;
-}
 
 .side-bar{
   @include left();
@@ -32,9 +29,9 @@
      }
    }
   .footer{
-       height:603px;
-       overflow: auto;
        background-color: #2f3e51;
+       overflow: auto;
+       height: 698px;
        .group{
         &__name{
           font-size:20px;
