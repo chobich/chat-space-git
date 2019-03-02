@@ -4,6 +4,7 @@
   width:300px;
   margin:0px;
   padding:0px;
+  height: 100vh;
 }
 
 .side-bar{
@@ -30,8 +31,9 @@
    }
   .footer{
        background-color: #2f3e51;
-       overflow: auto;
-       height: 698px;
+       height:calc(100vh - 90px);
+       overflow-y: scroll;
+
        .group{
         &__name{
           font-size:20px;

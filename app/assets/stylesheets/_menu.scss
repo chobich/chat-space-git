@@ -2,17 +2,18 @@
   width:calc(100vw - 300px);
   margin:0px 0px 0px 300px;
   background-color:#FFFFFF;
-  height:calc(100vh - 180px);
 }
 
 .message-box{
   @include right();
+  height:calc(100vh - 180px);
   overflow-y: scroll;
 }
 .right{
   background-color: #FAFAFA;
   box-sizing: border-box;
   padding: 46px 40px 0;
+
   .upper-message{
     display: flex;
   &__chat_name{
@@ -46,7 +47,7 @@
     border: none;
     float: left;
     height: 50px;
-    width: calc(100% - 150px);
+    width: calc(100vw - 550px);
   }
   &__mask {
     background-color: #fff;

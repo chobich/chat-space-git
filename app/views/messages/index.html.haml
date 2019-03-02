@@ -1,12 +1,13 @@
 = render 'shared/side_bar'
 = render partial: 'top'
-.message-box
-  = render @messages
-.form
-  = form_for [@group, @message] ,method: :post,id: :new_message do |f|
-    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-    .form__mask
-      = f.label :image, class: 'form__mask__image' do
-        = fa_icon 'picture-o', class: 'icon'
-        = f.file_field :image, class: 'hidden'
-    = f.submit 'Send', class: 'form__submit'
+.wrapper
+  .message-box
+    = render @messages
+  .form
+    = form_for [@group, @message] ,method: :post,id: :new_message do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
