@@ -3,17 +3,14 @@
   margin:0px 0px 0px 300px;
   background-color:#FFFFFF;
 }
-
 .message-box{
   @include right();
   height:calc(100vh - 180px);
-  overflow-y: scroll;
-}
-.right{
+  overflow-y:scroll;
+.message{
   background-color: #FAFAFA;
   box-sizing: border-box;
   padding: 46px 40px 0;
-
   .upper-message{
     display: flex;
   &__chat_name{
@@ -27,7 +24,7 @@
     padding:0px 0px 0px 10px;
   }
 }
-.lower-message{
+ .lower-message{
   margin-top: 10px;
   &__chat_comment{
     font-size:14px;
@@ -36,7 +33,7 @@
   }
 }
 }
-
+}
 .form{
   @include right();
   background-color: #DDDDDD;
