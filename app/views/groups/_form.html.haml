@@ -26,10 +26,10 @@
     .chat-group-form__field--right
       #chat-group-users
         #chat-group-user.chat-group-user.clearfix
-  /         = f.hidden_field :member, name: 'group[user_ids][]', value: current_user.id
-  /         %p.chat-group-user__name
-  /           - @group.users.each do |user|
-  /             = user.name
+          = f.hidden_field :member, name: 'group[user_ids][]', value: current_user.id
+          %p.chat-group-user__name
+            - @group.users.each do |user|
+              = user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
