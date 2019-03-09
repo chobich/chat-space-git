@@ -36,12 +36,11 @@ $(document).on('turbolinks:load', function() {
       contentType: false
     })
 
-    .done(function(message_data,status, xhr){
+    .done(function(message_data){
       var html = buildSendMessageHTML(message_data);
       $('.message-box').append(html).animate({scrollTop: $('.message-box')[0].scrollHeight});
       $('.form__submit').prop('disabled',false);
       $('#new_message')[0].reset();
-
     })
     .fail(function(){
       alert('error');
@@ -54,7 +53,7 @@ $(function(){
 
   function updateMessage(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-    var latest_message_id = $('.message').last().data('id');
+    var latest_message_id = $('.message:last').data('id') || 0;
     $.ajax({
       url: location.href,
       type: 'GET',
